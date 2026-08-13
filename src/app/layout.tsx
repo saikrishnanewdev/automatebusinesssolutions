@@ -4,6 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'AUTOMATE BUSINESS SOLUTIONS | Business Automation & Software Solutions',
   description: 'We build business apps, automation systems, integrations, Excel solutions, websites, and custom software that help businesses work smarter and grow faster.',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   keywords: [
     'Business Automation',
     'App Development',

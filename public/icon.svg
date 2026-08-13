@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background Base -->
+  <rect width="64" height="64" rx="16" fill="#031638" />
+  <rect width="62" height="62" x="1" y="1" rx="15" fill="none" stroke="#FF9800" stroke-opacity="0.4" stroke-width="2" />
+  
+  <!-- Glowing Workflow Connections -->
+  <path d="M16 32H48" stroke="#FF9800" stroke-width="5" stroke-linecap="round" stroke-dasharray="6 4" />
+  <path d="M32 16V48" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- Outer Connecting Nodes -->
+  <circle cx="16" cy="32" r="8" fill="#06245A" stroke="#FF9800" stroke-width="4" />
+  <circle cx="48" cy="32" r="9" fill="#FF9800" />
+  <circle cx="32" cy="16" r="6" fill="#06245A" stroke="#FFFFFF" stroke-width="3" />
+  <circle cx="32" cy="48" r="6" fill="#06245A" stroke="#FFFFFF" stroke-width="3" />
+  
+  <!-- Core Active Glow Point -->
+  <circle cx="48" cy="32" r="4" fill="#FFFFFF" />
+</svg>
