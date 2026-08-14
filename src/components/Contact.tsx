@@ -55,6 +55,19 @@ export default function Contact() {
     }
   };
 
+  const handleReset = () => {
+    setFormData({
+      name: '',
+      businessName: '',
+      email: '',
+      phone: '',
+      serviceType: 'Business Automation',
+      message: ''
+    });
+    setError(null);
+    setSubmitted(false);
+  };
+
 
   return (
     <section id="contact" className="py-24 bg-[#031638] relative overflow-hidden border-t border-amber-500/10">
@@ -129,7 +142,7 @@ export default function Contact() {
                     Thank you! Our automation engineers will review your manual process and get back to you within 24 hours.
                   </p>
                   <button
-                    onClick={() => setSubmitted(false)}
+                    onClick={handleReset}
                     className="px-6 py-2.5 rounded-xl bg-[#06245A] border border-amber-500/30 text-amber-400 font-semibold text-xs uppercase tracking-wider hover:bg-amber-500 hover:text-slate-950 transition-colors"
                   >
                     Submit Another Request
