@@ -32,20 +32,8 @@ export default function Contact() {
     setLoading(true);
     setError(null);
 
-    const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
-
-    if (!webhookUrl) {
-      // Fallback for simulation if webhook URL is not set
-      console.warn("NEXT_PUBLIC_N8N_WEBHOOK_URL is not set. Simulating form submission.");
-      setTimeout(() => {
-        setLoading(false);
-        setSubmitted(true);
-      }, 1000);
-      return;
-    }
-
     try {
-      const response = await fetch(webhookUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,13 +42,14 @@ export default function Contact() {
       });
 
       if (!response.ok) {
-        throw new Error(`Submission failed: ${response.statusText || response.status}`);
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || `Submission failed: ${response.statusText || response.status}`);
       }
 
       setSubmitted(true);
     } catch (err: any) {
-      console.error("n8n Webhook Error:", err);
-      setError("Unable to submit form. Please check your network connection or try again later.");
+      console.error("Form Submission Error:", err);
+      setError(err.message || "Unable to submit form. Please check your network connection or try again later.");
     } finally {
       setLoading(false);
     }
