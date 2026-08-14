@@ -17,6 +17,7 @@ import {
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     businessName: '',
@@ -26,15 +27,45 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulated backend submission
-    setTimeout(() => {
-      setLoading(false);
+    setError(null);
+
+    const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
+
+    if (!webhookUrl) {
+      // Fallback for simulation if webhook URL is not set
+      console.warn("NEXT_PUBLIC_N8N_WEBHOOK_URL is not set. Simulating form submission.");
+      setTimeout(() => {
+        setLoading(false);
+        setSubmitted(true);
+      }, 1000);
+      return;
+    }
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Submission failed: ${response.statusText || response.status}`);
+      }
+
       setSubmitted(true);
-    }, 1000);
+    } catch (err: any) {
+      console.error("n8n Webhook Error:", err);
+      setError("Unable to submit form. Please check your network connection or try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   return (
     <section id="contact" className="py-24 bg-[#031638] relative overflow-hidden border-t border-amber-500/10">
@@ -231,6 +262,12 @@ export default function Contact() {
                       </>
                     )}
                   </button>
+
+                  {error && (
+                    <div className="p-3 text-xs text-rose-400 bg-rose-950/40 border border-rose-500/30 rounded-xl text-center font-mono">
+                      {error}
+                    </div>
+                  )}
                 </form>
               )}
             </div>
