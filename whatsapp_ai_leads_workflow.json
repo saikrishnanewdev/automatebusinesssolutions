@@ -1,0 +1,308 @@
+{
+  "name": "WhatsApp AI Business Lead Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "multipleMethods": true,
+        "path": "fd9d6c52-37ab-464f-93a1-65617c7e791b",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -300,
+        200
+      ],
+      "id": "fb18687b-f1cf-41c7-8f6f-80034b049e02",
+      "name": "Webhook",
+      "webhookId": "fd9d6c52-37ab-464f-93a1-65617c7e791b"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.query[\"hub.challenge\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        -60,
+        0
+      ],
+      "id": "c3cf0b31-3ce2-481b-b20c-924b8574fd95",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "msg-check",
+              "leftValue": "={{ $json.body.entry?.[0]?.changes?.[0]?.value?.messages?.[0] ? 'yes' : '' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -60,
+        200
+      ],
+      "id": "3601294b-d9ba-4e36-9fb8-4dc2f059763d",
+      "name": "If3"
+    },
+    {
+      "parameters": {
+        "jsCode": "const value = $json.body?.entry?.[0]?.changes?.[0]?.value;\nconst message = value?.messages?.[0];\n\nif (!message) {\n  return [];\n}\n\nconst text = message.text?.body || '';\n\nreturn [{\n  json: {\n    phone: String(message.from || '').trim(),\n    messageText: String(text).trim(),\n    normalizedText: String(text).trim().toLowerCase(),\n    messageType: message.type || '',\n    timestamp: message.timestamp || '',\n    originalWebhook: $json\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        180,
+        200
+      ],
+      "id": "3bd0fb2e-2f22-4f6a-9609-cb13a6ed9711",
+      "name": "Normalize Message"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "1u78iLt-GDkpot1GitfsVDEVbF3bpvwo6YyvdHM64JhA",
+          "mode": "list",
+          "cachedResultName": "whatsapp_leads_template",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1u78iLt-GDkpot1GitfsVDEVbF3bpvwo6YyvdHM64JhA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1365393096,
+          "mode": "list",
+          "cachedResultName": "whatsapp_leads_template",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1u78iLt-GDkpot1GitfsVDEVbF3bpvwo6YyvdHM64JhA/edit#gid=1365393096"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Phone Number",
+              "lookupValue": "={{ $('Normalize Message').item.json.phone }}"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        420,
+        200
+      ],
+      "id": "gs-get-row-node",
+      "name": "Get Row by Phone",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleApi": {
+          "id": "m7ijOZCzZdhT0VE4",
+          "name": "Google Service Account account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Normalize Message').item.json.messageText }}",
+        "systemMessage": "=You are an automated lead collection assistant for Automate Business Solutions.\nYour job is to guide WhatsApp leads to provide their service interest and contact details.\n\nCUSTOMER DATABASE INFO (Current details for phone +{{ $('Normalize Message').item.json.phone }}):\n- Status: {{ $json['Status'] ? $json['Status'] : 'New' }}\n- Selected Service: {{ $json['Selected Service'] ? $json['Selected Service'] : 'None' }}\n- Lead Information: {{ $json['Lead Information'] ? $json['Lead Information'] : 'None' }}\n\nBUSINESS DIRECTORY:\nWe offer these 6 services:\n1. App Development\n2. Landing Page / Website\n3. Excel Automation\n4. Business Process Automation\n5. System Integration\n6. Other Software Solutions\n\nSTEPS & BOT RULES:\n1. Read the CUSTOMER DATABASE INFO above to know the user's current status:\n   - If the Status is 'New' (they are not in our sheet yet): Introduce our business, list the 6 services, and ask them to select one service (by replying with its number 1 to 6).\n   - If the Status is 'Waiting for Details': Politely ask them to provide their contact details in this format:\n     Name:\n     Mobile No:\n     Preferred Time Slot:\n   - If the Status is 'Completed': Politely tell them we already received their details and our team will get in touch shortly.\n2. Keep all your replies friendly, short, and optimized for WhatsApp layout. Do not use complex markdown styling (only standard text, emojis, and basic lists)."
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1,
+      "position": [
+        680,
+        200
+      ],
+      "id": "ai-agent-leads",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "qwen2.5:3b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        600,
+        380
+      ],
+      "id": "chat-ollama-node",
+      "name": "Chat Ollama",
+      "credentials": {
+        "ollamaApi": {
+          "id": "ollama-local-api",
+          "name": "Ollama Local host"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionKey": "={{ $('Normalize Message').item.json.phone }}",
+        "contextKey": "chat_history"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.2,
+      "position": [
+        720,
+        380
+      ],
+      "id": "memory-node",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v20.0/1239384565930420/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer EAATVkMmiGPEBSKfSU2axfvZCmn50SxUbXACyQbB2AySxHPuJ7dDXaGeEPZCvEZCdNsWd4fLZAgEAkznQjYjRjgEN5EUwKgcyuHuD4oZC96huPiKvBaBhKdKZAI1SFkkhpaeNTQXLU1WrilsrJKE0dX7eXDzdR7qckKAZAu6J4yZCbj253qkAntGKNwfYQfZB5YEMFYgZDZD"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"messaging_product\": \"whatsapp\",\n  \"recipient_type\": \"individual\",\n  \"to\": \"{{ $('Normalize Message').item.json.phone }}\",\n  \"type\": \"text\",\n  \"text\": {\n    \"body\": \"{{ $json.output }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        940,
+        200
+      ],
+      "id": "whatsapp-reply-node",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "Normalize Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Message": {
+      "main": [
+        [
+          {
+            "node": "Get Row by Phone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Row by Phone": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Ollama": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "03edc4ad-de0e-49a7-9e44-813ee22163dd",
+  "meta": {
+    "instanceId": "e05daab232a9565f4d4d66e86354a9655fe598a7b86bd41badfc7089fa4e6d2e"
+  },
+  "nodeGroups": [],
+  "id": "xf333OrIOWaEcG5t",
+  "tags": []
+}

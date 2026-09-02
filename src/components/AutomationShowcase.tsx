@@ -12,6 +12,7 @@ import {
   Code,
   Sparkles
 } from 'lucide-react';
+import AmbientShaderBg from '@/components/3d/AmbientShaderBg';
 
 const workflowSteps = [
   {
@@ -61,6 +62,9 @@ export default function AutomationShowcase() {
 
   return (
     <section className="py-24 bg-[#020B19] relative overflow-hidden">
+      {/* 3D Wave Shader Background */}
+      <AmbientShaderBg />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}

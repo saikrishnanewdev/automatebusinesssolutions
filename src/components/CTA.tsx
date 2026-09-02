@@ -3,10 +3,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, MessageSquare } from 'lucide-react';
+import AmbientShaderBg from '@/components/3d/AmbientShaderBg';
 
 export default function CTA() {
   return (
     <section className="py-24 bg-[#020B19] relative overflow-hidden">
+      {/* 3D Ambient WebGL Wave Shader Canvas */}
+      <AmbientShaderBg />
+
       {/* Glowing radial backdrop */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#06245A]/70 via-[#031638] to-[#06245A]/70 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-amber-500/20 via-amber-400/10 to-amber-600/20 rounded-full blur-[130px] pointer-events-none" />
