@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Logo from './Logo';
-import { ShieldCheck, Cpu } from 'lucide-react';
+import { ShieldCheck, Cpu, Mail, MapPin } from 'lucide-react';
 
 const links = [
   { name: 'Services', href: '#services' },
@@ -35,6 +35,22 @@ export default function Footer() {
               </a>
             ))}
           </nav>
+        </div>
+
+        {/* Contact Info Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 border-b border-slate-800/80 pb-6">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+            <span className="flex items-center gap-1.5 text-slate-300">
+              <Mail className="w-3.5 h-3.5 text-amber-400" /> abs.innovates@gmail.com
+            </span>
+            <span className="hidden sm:inline text-slate-600">•</span>
+            <span className="flex items-center gap-1.5 text-slate-300">
+              <Mail className="w-3.5 h-3.5 text-amber-400" /> automatebusinesssolutions@gmail.com
+            </span>
+          </div>
+          <div className="flex items-center gap-1.5 text-slate-400">
+            <MapPin className="w-3.5 h-3.5 text-amber-400" /> Andhra Pradesh, India
+          </div>
         </div>
 
         {/* Bottom Bar */}

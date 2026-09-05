@@ -11,7 +11,9 @@ import {
   Phone,
   User,
   MessageSquare,
-  Layers
+  Layers,
+  MapPin,
+  Globe
 } from 'lucide-react';
 
 export default function Contact() {
@@ -116,9 +118,24 @@ export default function Contact() {
               </ul>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#06245A]/40 border border-slate-800 text-xs font-mono text-slate-400 flex items-center justify-between">
-              <span>BUSINESS SOLUTIONS DEPLOYMENT</span>
-              <span className="text-emerald-400 font-bold">READY TO CONSULT</span>
+            <div className="p-5 rounded-2xl bg-[#020B19]/90 border border-amber-500/20 space-y-3 text-xs">
+              <span className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest block">
+                Direct Contact Channels
+              </span>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                  <span className="truncate">abs.innovates@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                  <span className="truncate">automatebusinesssolutions@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
+                  <span>Andhra Pradesh, India</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
