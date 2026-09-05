@@ -80,12 +80,24 @@ The Next.js web application includes visual elements to showcase this automated 
    - Real-time TypeScript code/JSON payload inspection window for client presentations.
 2. **Hero Scenario Simulator (`src/components/Hero.tsx`):**
    - Interactive tab switcher showcasing WhatsApp bot payload transformations.
-3. **Automation Command Center (`src/components/About.tsx`):**
+3. **Automation Command Center & Company Profile (`src/components/About.tsx`):**
    - Mock console logging real-time lead ingestion events and bot interactions.
+   - **Leadership & Engineering Profiles:** Features **Charan M.C.A** (*Business Analyst & Test Engineer*) & **Krishna B.Tech** (*Database Administrator & DevOps Engineer*).
+   - **Value Pillars & Services Grid:** Highlights *Faster Processes*, *Better Accuracy*, *Higher Productivity*, and *Smart Automation* across *Apps Development*, *Landpage Design*, *Excel Works*, *Integration Works*, and *System Work Automation*.
+   - **Verified Entity Profile Card:** Displays official contact endpoints (`abs.innovates@gmail.com`, `automatebusinesssolutions@gmail.com`, `https://automatebusinesssolutions.vercel.app`) and headquarters (`Andhra Pradesh, India`).
 
 ---
 
-## 5. 🛠️ How to Deploy & Test the WhatsApp AI Bot
+## 5. 👥 Leadership & Technical Ownership
+
+| Member | Degree / Credentials | Role & Responsibilities | Key Expertise |
+| :--- | :--- | :--- | :--- |
+| **CHARAN** | `M.C.A` | **Business Analyst & Test Engineer** | Workflow Analysis, Test Automation, Process Mapping, Quality Assurance |
+| **KRISHNA** | `B.Tech` | **Database Administrator & DevOps Engineer** | Database Architecture, DevOps & CI/CD, Cloud Infrastructure, System Integration |
+
+---
+
+## 6. 🛠️ How to Deploy & Test the WhatsApp AI Bot
 
 ### Prerequisites:
 - **n8n Instance:** Self-hosted or cloud n8n instance (`v1.0+`).
