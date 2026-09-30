@@ -3,128 +3,111 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  TrendingUp,
-  ShoppingCart,
-  Headphones,
-  BarChart3,
-  QrCode,
   Building2,
+  Monitor,
+  Smartphone,
+  MessageSquare,
+  Globe,
+  FileSpreadsheet,
   ArrowRight
 } from 'lucide-react';
 
 const solutions = [
   {
-    title: 'Sales & Lead Automation',
-    icon: TrendingUp,
-    flow: ['New Lead', 'CRM Sync', 'Instant Follow-up', 'Closed Deal'],
-    desc: 'Never lose a lead again. Automatically capture leads from forms & WhatsApp, route to sales reps, and trigger instant follow-ups.'
-  },
-  {
-    title: 'Order & Inventory Automation',
-    icon: ShoppingCart,
-    flow: ['Online Order', 'Payment Gateway', 'Inventory Update', 'Auto Invoice'],
-    desc: 'Connect your store or sales portal directly to your warehouse stock, billing, and logistics without manual entry.'
-  },
-  {
-    title: 'Automated Customer Support',
-    icon: Headphones,
-    flow: ['WhatsApp Msg', 'Bot Routing', 'Ticket Created', 'Notification'],
-    desc: 'Respond to customer inquiries 24/7. Auto-answer common questions and route complex requests to your team.'
-  },
-  {
-    title: 'Automated Reporting & Analytics',
-    icon: BarChart3,
-    flow: ['Raw Data', 'Auto Processing', 'Live Dashboard', 'Smart Decision'],
-    desc: 'Replace tedious weekly reporting. Extract data from multiple sources and build live executive dashboards automatically.'
-  },
-  {
-    title: 'Attendance & Access Control',
-    icon: QrCode,
-    flow: ['Face / QR Code', 'Timestamp', 'Central Database', 'Payroll Report'],
-    desc: 'Streamline staff check-ins with fast face or QR scanners synchronized directly with your HR and payroll database.'
-  },
-  {
-    title: 'Business Operations Workflow',
+    title: 'Custom ERP & business management',
     icon: Building2,
-    flow: ['Employee Request', 'Approval Flow', 'Action Execution', 'Log Archive'],
-    desc: 'Digitize internal approvals, purchase requests, task routing, and operational handoffs into clean automated pipelines.'
+    desc: 'Unify sales, inventory, accounting, HR, and reporting into a single custom ERP system tailored to your exact business operations.',
+    benefit: 'Eliminate duplicate software subscriptions & manual re-entry'
+  },
+  {
+    title: 'Custom Windows desktop software',
+    icon: Monitor,
+    desc: 'Native Windows desktop applications built for high-speed offline operations, device hardware connectivity, and deep desktop performance.',
+    benefit: 'Sub-millisecond processing speed on Windows PCs'
+  },
+  {
+    title: 'Custom iOS & Android mobile apps',
+    icon: Smartphone,
+    desc: 'Custom cross-platform mobile apps for field teams, delivery drivers, inventory scanning, and executive approval flows.',
+    benefit: 'Empower your mobile workforce with real-time sync'
+  },
+  {
+    title: 'Custom web portals & SaaS platforms',
+    icon: Globe,
+    desc: 'Secure customer management portals, vendor ordering systems, and web dashboards accessible from any modern browser.',
+    benefit: 'Instant 24/7 web access for clients & employees'
+  },
+  {
+    title: 'WhatsApp AI lead & support automation',
+    icon: MessageSquare,
+    desc: 'Automated 24/7 WhatsApp AI chatbots that capture incoming leads, answer customer FAQs, and dispatch automated status alerts.',
+    benefit: 'Zero missed sales opportunities 24 hours a day'
+  },
+  {
+    title: 'Any manual work & Excel automation',
+    icon: FileSpreadsheet,
+    desc: 'Automate repetitive spreadsheet data entry, file format conversions, report generation, and manual cross-system copy-pasting.',
+    benefit: 'Reclaim 100% of time spent on tedious manual tasks'
   }
 ];
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="py-24 bg-[#031638] relative overflow-hidden border-t border-amber-500/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+    <section id="solutions" className="py-space-12 bg-bg-light border-b border-border-medium">
+      <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#06245A] border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-widest">
-            Tailored Software Engineering
+        <div className="text-left mb-space-10">
+          <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-space-2">
+            Tailored Systems
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            BUILT FOR <span className="text-amber-500">REAL BUSINESS PROBLEMS</span>
+          <h2 className="text-2xl sm:text-lg font-bold text-dark tracking-tight">
+            Tailored business software & process automation.
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg">
-            We design custom software engines specifically tailored to solve bottlenecks in your day-to-day business operations.
+          <p className="text-base text-secondary mt-space-3 max-w-2xl">
+            We design custom software engines tailored to solve specific operational bottlenecks in your day-to-day business.
           </p>
         </div>
 
         {/* Grid of Solution Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="rounded-2xl bg-[#020B19]/80 border border-amber-500/15 p-6 sm:p-7 flex flex-col justify-between hover:border-amber-500/40 hover:bg-[#06245A]/30 transition-all duration-300 shadow-xl backdrop-blur-md group"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-[#06245A] border border-amber-500/30 text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-[10px] font-mono font-bold px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">
-                      USE CASE #{idx + 1}
-                    </span>
+        <div className="grid gap-space-6 sm:grid-cols-2 lg:grid-cols-3">
+          {solutions.map((solution, index) => (
+            <motion.div
+              key={solution.title}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="card-token p-space-6 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center gap-space-3 mb-space-4">
+                  <div className="w-10 h-10 rounded-sm bg-bg-light border border-border-medium flex items-center justify-center shrink-0">
+                    <solution.icon className="w-5 h-5 text-primary" />
                   </div>
-
-                  <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal">
-                    {item.desc}
-                  </p>
-
-                  {/* Flow Diagram Bar */}
-                  <div className="pt-4 border-t border-slate-800/80 space-y-2">
-                    <div className="text-[11px] font-mono font-semibold text-amber-400 uppercase tracking-wider">
-                      AUTOMATED FLOW
-                    </div>
-                    <div className="flex items-center flex-wrap gap-1 text-[11px] font-mono font-semibold text-slate-300 bg-[#031638] p-2.5 rounded-lg border border-slate-800">
-                      {item.flow.map((step, sIdx) => (
-                        <React.Fragment key={sIdx}>
-                          <span className="text-white">{step}</span>
-                          {sIdx < item.flow.length - 1 && (
-                            <ArrowRight className="w-3 h-3 text-amber-400 shrink-0" />
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </div>
+                  <h3 className="font-semibold text-dark text-base">{solution.title}</h3>
                 </div>
 
-                <div className="mt-6 pt-4 flex items-center justify-between text-xs font-bold text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span>Request standard demo</span>
-                  <ArrowRight className="w-4 h-4 translate-x-0 group-hover:translate-x-1 transition-transform" />
+                <p className="text-sm text-secondary leading-relaxed mb-space-4">
+                  {solution.desc}
+                </p>
+              </div>
+
+              <div>
+                <div className="p-space-3 text-xs text-dark bg-bg-light border border-border-light rounded-sm font-medium mb-space-4">
+                  <strong className="text-primary font-semibold">Impact:</strong> {solution.benefit}
                 </div>
-              </motion.div>
-            );
-          })}
+
+                <a
+                  href="#contact"
+                  className="w-full btn-secondary text-sm"
+                >
+                  <span>Request custom proposal</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

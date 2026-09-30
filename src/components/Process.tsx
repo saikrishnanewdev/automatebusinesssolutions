@@ -13,110 +13,95 @@ import {
 const steps = [
   {
     number: '01',
-    title: 'Understand',
-    subtitle: 'Process Audit & Discovery',
-    desc: 'We analyze your current daily operations, Excel sheets, manual communications, and software tools to pinpoint exact bottlenecks and repetitive tasks.',
+    title: 'Process audit & requirements',
+    subtitle: 'Workflow & Requirements Analysis',
+    desc: 'We analyze your manual operations, Excel workflows, and software requirements to define clear specs.',
     icon: Search,
-    details: ['Map manual workflows', 'Calculate potential time savings', 'Define security & permissions']
+    details: ['Map manual workflows', 'Audit database requirements', 'Calculate time savings']
   },
   {
     number: '02',
-    title: 'Design',
-    subtitle: 'System Architecture & UX',
-    desc: 'We design the exact software flow, database schema, user interface, and integration points to ensure intuitive adoption for your team.',
+    title: 'Architecture & UI design',
+    subtitle: 'System & Database Specification',
+    desc: 'We design custom ERP software flows, database schemas, and responsive UI layouts for seamless adoption.',
     icon: Layout,
-    details: ['Workflow diagramming', 'Database & API mapping', 'User interface prototypes']
+    details: ['Custom ERP workflow design', 'Database schema architecture', 'Desktop & Mobile UI prototyping']
   },
   {
     number: '03',
-    title: 'Build',
-    subtitle: 'Development & Integration',
-    desc: 'We develop, test, and integrate your custom solution with existing tools (WhatsApp, Excel, ERP, Databases, Payment Gateways).',
+    title: 'Software build & integration',
+    subtitle: 'Development & Quality Testing',
+    desc: 'We develop clean Windows desktop software, mobile apps, web portals, or WhatsApp AI bots with automated testing.',
     icon: Code2,
-    details: ['Clean TypeScript code', 'Rigorous error handling', 'Live staging & testing']
+    details: ['Clean code development', 'Automated QA testing', 'WhatsApp & API system integration']
   },
   {
     number: '04',
-    title: 'Automate',
-    subtitle: 'Deployment & Scaling',
-    desc: 'Your business process runs seamlessly in the background with zero manual friction. Your team receives full training and ongoing support.',
+    title: 'Deployment, training & support',
+    subtitle: 'Deployment & Ongoing Optimization',
+    desc: 'Your custom software runs smoothly with zero manual friction. Team training and ongoing technical support included.',
     icon: Zap,
-    details: ['Zero downtime launch', 'Staff training session', 'Continuous monitoring']
+    details: ['Smooth deployment', 'Team training & onboarding', 'Ongoing technical support']
   }
 ];
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 bg-[#020B19] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+    <section id="process" className="py-space-12 bg-bg-light border-b border-border-medium">
+      <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#06245A] border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-widest">
-            Clear & Predictable Execution
+        <div className="text-left mb-space-10">
+          <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-space-2">
+            Methodology
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            FROM IDEA TO <span className="text-amber-500">AUTOMATION</span>
+          <h2 className="text-2xl sm:text-lg font-bold text-dark tracking-tight">
+            Our 4-step engineering process.
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg font-normal">
-            A proven 4-step engineering methodology to digitize and automate your business operations.
+          <p className="text-base text-secondary mt-space-3 max-w-2xl">
+            A battle-tested software engineering process designed for seamless custom ERP, desktop/mobile app, and automated workflow deployment.
           </p>
         </div>
 
-        {/* 4-Step Timeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-          
-          {/* Connecting Line behind cards on desktop */}
-          <div className="hidden lg:block absolute top-12 left-12 right-12 h-0.5 bg-gradient-to-r from-amber-500/80 via-amber-400 to-emerald-400 z-0" />
-
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
-            return (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.12 }}
-                className="relative z-10 rounded-2xl bg-[#031638] border border-amber-500/20 p-6 flex flex-col justify-between hover:border-amber-500/50 hover:bg-[#06245A]/50 transition-all duration-300 shadow-xl backdrop-blur-md group"
-              >
-                <div className="space-y-4">
-                  {/* Top Badge & Step Number */}
-                  <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black flex items-center justify-center text-lg shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-3xl font-black font-mono text-slate-700 group-hover:text-amber-400 transition-colors">
-                      {step.number}
-                    </span>
+        {/* 4-Step Grid */}
+        <div className="grid gap-space-6 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="card-token p-space-6 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-space-4">
+                  <div className="w-10 h-10 rounded-sm bg-bg-light border border-border-medium flex items-center justify-center">
+                    <step.icon className="w-5 h-5 text-primary" />
                   </div>
-
-                  <div>
-                    <h3 className="text-2xl font-extrabold text-white group-hover:text-amber-400 transition-colors">
-                      {step.title}
-                    </h3>
-                    <div className="text-xs font-mono text-amber-400 font-semibold mt-0.5">
-                      {step.subtitle}
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
-                    {step.desc}
-                  </p>
-
-                  {/* Deliverables Bullet list */}
-                  <div className="pt-4 border-t border-slate-800 space-y-1.5">
-                    {step.details.map((detail, dIdx) => (
-                      <div key={dIdx} className="flex items-center gap-1.5 text-[11px] font-medium text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                        <span>{detail}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <span className="text-xs font-mono text-secondary px-space-2 py-space-1 bg-bg-light border border-border-light rounded-sm">
+                    Phase {step.number}
+                  </span>
                 </div>
-              </motion.div>
-            );
-          })}
+
+                <h3 className="font-semibold text-dark text-base mb-space-1">{step.title}</h3>
+                <p className="text-xs font-medium text-primary mb-space-3">{step.subtitle}</p>
+
+                <p className="text-sm text-secondary leading-relaxed mb-space-4">
+                  {step.desc}
+                </p>
+              </div>
+
+              <ul className="space-y-space-2 pt-space-4 border-t border-border-light text-xs text-secondary">
+                {step.details.map((detail, detailIndex) => (
+                  <li key={detailIndex} className="flex items-center gap-space-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

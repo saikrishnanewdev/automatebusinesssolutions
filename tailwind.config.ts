@@ -9,39 +9,52 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: '#020B19',
-          900: '#031638',
-          800: '#06245A',
-          700: '#0B3B8C',
-          600: '#1252C4',
-        },
-        brand: {
-          orange: '#FF9800',
-          'orange-dark': '#E68200',
-          'orange-light': '#FFB74D',
-          navy: '#06245A',
-          'deep-navy': '#031638',
+        dark: '#091520',      // color-1: Dark navy / Text primary
+        accent: '#4995D1',    // color-4: Accent blue
+        sand: '#BDB185',      // color-5: Text light / sand
+        'bg-light': '#F5F4F0',// color-11: Warm off-white background
+        'bg-white': '#FFFFFF',// color-12: Clean white
+        primary: '#007BFF',   // --primary: Text Primary / Active Blue
+        secondary: '#6C757D', // --secondary: Slate gray secondary
+        border: {
+          light: '#E6E6E6',
+          medium: '#E4E4E4',
+          subtle: '#CFCFCF',
+          DEFAULT: '#CCCCCC',
+          dark: '#C5C6C6',
         }
+      },
+      borderRadius: {
+        sm: '4px',
+        full: '50%',
+        DEFAULT: '4px',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        sans: ['sofia-pro', 'Inter', 'system-ui', 'sans-serif'],
       },
-      animation: {
-        'marquee': 'marquee 35s linear infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+      fontSize: {
+        'xs': ['12px', { lineHeight: '18px' }],
+        'sm': ['15px', { lineHeight: '22px' }],
+        'base': ['16px', { lineHeight: '26px' }],
+        'body-lg': ['26px', { lineHeight: '38px' }],
+        'lg': ['40px', { lineHeight: '48px' }],
+        'xl': ['68px', { lineHeight: '80px' }],
       },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        glow: {
-          '0%': { boxShadow: '0 0 15px rgba(255, 152, 0, 0.2)' },
-          '100%': { boxShadow: '0 0 30px rgba(255, 152, 0, 0.6)' },
-        }
+      spacing: {
+        'space-1': '4px',
+        'space-2': '8px',
+        'space-3': '10px',
+        'space-4': '12px',
+        'space-5': '15px',
+        'space-6': '16px',
+        'space-7': '20px',
+        'space-8': '30px',
+        'space-9': '35px',
+        'space-10': '40px',
+        'space-11': '50px',
+        'space-12': '60px',
+        'space-13': '80px',
+        'space-14': '110px',
       }
     },
   },

@@ -1,3 +1,7 @@
+# Automate Business Solutions
+
+A professional business website showcasing our automation services.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

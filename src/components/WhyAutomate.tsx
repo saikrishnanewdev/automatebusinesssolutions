@@ -4,104 +4,81 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Clock,
-  ShieldAlert,
+  ShieldCheck,
   Zap,
-  TrendingUp,
-  CheckCircle2
+  TrendingUp
 } from 'lucide-react';
 
 const values = [
   {
-    title: 'Less Manual Work',
+    title: 'Reduced manual labor',
     metric: '85%+',
-    subtitle: 'Reduction in repetitive tasks',
-    icon: Clock,
-    description: 'Free your staff from copy-pasting, manual data entry, and tedious spreadsheet formatting so they can focus on high-value work.'
+    description: 'Eliminate repetitive Excel copy-pasting, data entry, and manual background operations.',
+    icon: Clock
   },
   {
-    title: 'Fewer Errors',
-    metric: '99.9%',
-    subtitle: 'Data accuracy & precision',
-    icon: ShieldAlert,
-    description: 'Human fatigue leads to typos, missed follow-ups, and bad data. Automated workflow software executes exact rules consistently every time.'
+    title: 'Data accuracy',
+    metric: '99.99%',
+    description: 'Automated rules execute precise operations consistently across every database record.',
+    icon: ShieldCheck
   },
   {
-    title: 'Faster Operations',
+    title: 'Processing speed',
     metric: 'Instant',
-    subtitle: '24/7 background execution',
-    icon: Zap,
-    description: 'Workflows process in seconds, even overnight or on weekends. Customer leads are captured and processed immediately.'
+    description: 'Sub-second response times across WhatsApp leads, ERP updates, and desktop apps.',
+    icon: Zap
   },
   {
-    title: 'More Business Growth',
+    title: 'Operational scaling',
     metric: '10x',
-    subtitle: 'Operational scaling potential',
-    icon: TrendingUp,
-    description: 'Scale your business volume without linearly increasing staff headcount or overhead cost. Software scales effortlessly.'
+    description: 'Scale business operations and customer responses without expanding headcount.',
+    icon: TrendingUp
   }
 ];
 
 export default function WhyAutomate() {
   return (
-    <section className="py-24 bg-[#031638] relative overflow-hidden border-t border-amber-500/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#06245A] border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-widest">
-            Strategic ROI & Value
+    <section className="py-space-12 bg-bg-white border-b border-border-medium">
+      <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
+
+        {/* Section Header */}
+        <div className="text-left mb-space-10">
+          <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-space-2">
+            Metrics
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            WHY <span className="text-amber-500">AUTOMATE?</span>
+          <h2 className="text-2xl sm:text-lg font-bold text-dark tracking-tight">
+            Quantifiable value of Autom Mate.
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg font-normal">
-            Transform manual bottlenecks into automated software engines that scale effortlessly with your business.
+          <p className="text-base text-secondary mt-space-3 max-w-2xl">
+            Key operational metrics achieved when implementing custom software and automated workflows.
           </p>
         </div>
 
-        {/* 4 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="rounded-2xl bg-[#020B19]/90 border border-amber-500/20 p-6 flex flex-col justify-between hover:border-amber-500/50 hover:bg-[#06245A]/40 transition-all duration-300 shadow-xl backdrop-blur-md group"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-[#06245A] border border-amber-500/30 text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-3xl font-black text-amber-400 tracking-tight font-mono">
-                      {item.metric}
-                    </span>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                      {item.title}
-                    </h3>
-                    <div className="text-xs font-mono text-amber-400/90 font-semibold mt-0.5">
-                      {item.subtitle}
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-slate-300 leading-relaxed font-normal pt-2 border-t border-slate-800">
-                    {item.description}
-                  </p>
+        {/* Benefits Grid */}
+        <div className="grid gap-space-6 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((value, index) => (
+            <motion.div
+              key={value.title}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="card-token p-space-6 text-left"
+            >
+              <div className="flex items-center justify-between mb-space-4">
+                <div className="w-10 h-10 rounded-sm bg-bg-light border border-border-medium flex items-center justify-center">
+                  <value.icon className="w-5 h-5 text-primary" />
                 </div>
+                <span className="text-body-lg font-bold text-dark">{value.metric}</span>
+              </div>
 
-                <div className="mt-6 pt-3 flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
-                  <CheckCircle2 className="w-4 h-4" /> Guaranteed System Efficiency
-                </div>
-              </motion.div>
-            );
-          })}
+              <h3 className="font-semibold text-dark text-base mb-space-2">{value.title}</h3>
+
+              <p className="text-sm text-secondary leading-relaxed">
+                {value.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

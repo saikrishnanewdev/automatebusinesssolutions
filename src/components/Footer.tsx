@@ -2,67 +2,96 @@
 
 import React from 'react';
 import Logo from './Logo';
-import { ShieldCheck, Cpu, Mail, MapPin } from 'lucide-react';
+import { ShieldCheck, Mail, MapPin, Globe } from 'lucide-react';
 
 const links = [
-  { name: 'Services', href: '#services' },
   { name: 'Solutions', href: '#solutions' },
-  { name: 'Process', href: '#process' },
-  { name: 'About Us', href: '#about' },
-  { name: 'Contact Us', href: '#contact' },
+  { name: 'Services', href: '#services' },
+  { name: 'Automation showcase', href: '#showcase' },
+  { name: 'About us', href: '#about' },
+  { name: 'Contact us', href: '#contact' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#020B19] border-t border-amber-500/20 py-12 text-slate-400 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
-          
+    <footer className="bg-dark text-bg-white border-t border-secondary/30">
+      <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8 py-space-12 relative z-10">
+        <div className="grid gap-space-8 sm:grid-cols-2 lg:grid-cols-4 text-left">
+
           {/* Logo & Tagline */}
-          <div className="space-y-2 text-center md:text-left">
-            <Logo size="md" showTagline={true} />
+          <div className="space-y-space-3">
+            <div className="bg-bg-white p-space-2 rounded-sm inline-block">
+              <Logo size="md" />
+            </div>
+            <p className="text-sm text-secondary leading-relaxed">
+              Autom Mate engineers custom ERP systems, native Windows & mobile applications, web portals, WhatsApp AI chatbots, and process automation to eliminate manual business work.
+            </p>
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap justify-center items-center gap-6 text-sm font-medium text-slate-300">
-            {links.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="hover:text-amber-400 transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-
-        {/* Contact Info Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 border-b border-slate-800/80 pb-6">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <Mail className="w-3.5 h-3.5 text-amber-400" /> abs.innovates@gmail.com
-            </span>
-            <span className="hidden sm:inline text-slate-600">•</span>
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <Mail className="w-3.5 h-3.5 text-amber-400" /> automatebusinesssolutions@gmail.com
-            </span>
+          <div className="space-y-space-3">
+            <h3 className="font-semibold text-bg-white text-base">Navigation</h3>
+            <nav className="flex flex-col space-y-space-2">
+              {links.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm text-secondary hover:text-primary transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
           </div>
-          <div className="flex items-center gap-1.5 text-slate-400">
-            <MapPin className="w-3.5 h-3.5 text-amber-400" /> Andhra Pradesh, India
+
+          {/* Contact Info */}
+          <div className="space-y-space-3">
+            <h3 className="font-semibold text-bg-white text-base">Contact</h3>
+            <div className="space-y-space-2 text-sm text-secondary">
+              <div className="flex items-center gap-space-2">
+                <Globe className="w-4 h-4 text-accent shrink-0" />
+                <a href="https://automatebusinesssolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">automatebusinesssolutions.vercel.app</a>
+              </div>
+              <div className="flex items-center gap-space-2">
+                <Mail className="w-4 h-4 text-accent shrink-0" />
+                <span>abs.innovates@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-space-2">
+                <MapPin className="w-4 h-4 text-accent shrink-0" />
+                <span>Andhra Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Certifications & Quality */}
+          <div className="space-y-space-3">
+            <h3 className="font-semibold text-bg-white text-base">Quality & standards</h3>
+            <div className="space-y-space-2 text-sm text-secondary">
+              <div className="flex items-center gap-space-2">
+                <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
+                <span>Enterprise grade security</span>
+              </div>
+              <div className="flex items-center gap-space-2">
+                <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
+                <span>Custom database architecture</span>
+              </div>
+              <div className="flex items-center gap-space-2">
+                <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
+                <span>24/7 background automation</span>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
-          <div className="flex items-center gap-2 text-slate-400">
-            <Cpu className="w-4 h-4 text-amber-500" />
-            <span>© 2026 AUTOMATE BUSINESS SOLUTIONS. All rights reserved.</span>
-          </div>
-          <div className="flex items-center gap-4 text-slate-400">
-            <span className="flex items-center gap-1 text-slate-400">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" /> High-Performance Automation Software
-            </span>
+        <div className="mt-space-10 pt-space-6 border-t border-secondary/30 flex flex-col sm:flex-row items-center justify-between text-xs text-secondary gap-space-4">
+          <p>
+            © {new Date().getFullYear()} Autom Mate. All rights reserved.
+          </p>
+          <div className="flex items-center space-x-space-4">
+            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="#services" className="hover:text-primary transition-colors">Services</a>
+            <a href="#solutions" className="hover:text-primary transition-colors">Solutions</a>
           </div>
         </div>
       </div>
