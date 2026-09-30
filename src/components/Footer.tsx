@@ -16,10 +16,10 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-bg-white border-t border-secondary/30">
       <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8 py-space-12 relative z-10">
-        <div className="grid gap-space-8 sm:grid-cols-2 lg:grid-cols-4 text-left">
+        <div className="grid gap-space-8 sm:grid-cols-2 lg:grid-cols-12 text-left">
 
           {/* Logo & Tagline */}
-          <div className="space-y-space-3">
+          <div className="lg:col-span-4 space-y-space-3">
             <div className="bg-bg-white p-space-2 rounded-sm inline-block">
               <Logo size="md" />
             </div>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="space-y-space-3">
+          <div className="lg:col-span-2 space-y-space-3">
             <h3 className="font-semibold text-bg-white text-base">Navigation</h3>
             <nav className="flex flex-col space-y-space-2">
               {links.map((link) => (
@@ -45,18 +45,22 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-space-3">
+          <div className="lg:col-span-3 space-y-space-3 min-w-0">
             <h3 className="font-semibold text-bg-white text-base">Contact</h3>
             <div className="space-y-space-2 text-sm text-secondary">
-              <div className="flex items-center gap-space-2">
-                <Globe className="w-4 h-4 text-accent shrink-0" />
-                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">automatebusinesssolutions.de5.net</a>
+              <div className="flex items-start gap-space-2 min-w-0">
+                <Globe className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors break-all">
+                  automatebusinesssolutions.de5.net
+                </a>
               </div>
-              <div className="flex items-center gap-space-2">
-                <Mail className="w-4 h-4 text-accent shrink-0" />
-                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors">contact@automatebusinesssolutions.de5.net</a>
+              <div className="flex items-start gap-space-2 min-w-0">
+                <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors break-all">
+                  contact@automatebusinesssolutions.de5.net
+                </a>
               </div>
-              <div className="flex items-center gap-space-2">
+              <div className="flex items-center gap-space-2 min-w-0">
                 <MapPin className="w-4 h-4 text-accent shrink-0" />
                 <span>Andhra Pradesh, India</span>
               </div>
@@ -64,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Certifications & Quality */}
-          <div className="space-y-space-3">
+          <div className="lg:col-span-3 space-y-space-3">
             <h3 className="font-semibold text-bg-white text-base">Quality & standards</h3>
             <div className="space-y-space-2 text-sm text-secondary">
               <div className="flex items-center gap-space-2">

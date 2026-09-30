@@ -202,17 +202,17 @@ export default function About() {
             <h3 className="text-base font-bold text-dark">
               Ready to automate your business software & operations?
             </h3>
-            <div className="flex flex-wrap gap-space-4 text-xs text-secondary pt-space-1">
-              <div className="flex items-center gap-space-2">
-                <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:underline">contact@automatebusinesssolutions.de5.net</a>
+            <div className="flex flex-wrap gap-space-4 text-xs text-secondary pt-space-1 min-w-0">
+              <div className="flex items-start gap-space-2 min-w-0">
+                <Mail className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:underline break-all">contact@automatebusinesssolutions.de5.net</a>
               </div>
-              <div className="flex items-center gap-space-2">
-                <Globe className="w-4 h-4 text-primary" />
-                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:underline">automatebusinesssolutions.de5.net</a>
+              <div className="flex items-start gap-space-2 min-w-0">
+                <Globe className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:underline break-all">automatebusinesssolutions.de5.net</a>
               </div>
-              <div className="flex items-center gap-space-2">
-                <MapPin className="w-4 h-4 text-primary" />
+              <div className="flex items-center gap-space-2 min-w-0">
+                <MapPin className="w-4 h-4 text-primary shrink-0" />
                 <span>Andhra Pradesh, India</span>
               </div>
             </div>

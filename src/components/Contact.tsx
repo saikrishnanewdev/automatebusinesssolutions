@@ -147,20 +147,20 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="card-token p-space-6 space-y-space-3 text-sm text-secondary">
-                <div className="flex items-center gap-space-3">
-                  <Globe className="w-4 h-4 text-primary shrink-0" />
-                  <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline">
+              <div className="card-token p-space-6 space-y-space-3 text-sm text-secondary min-w-0">
+                <div className="flex items-start gap-space-3 min-w-0">
+                  <Globe className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline break-all">
                     automatebusinesssolutions.de5.net
                   </a>
                 </div>
-                <div className="flex items-center gap-space-3">
-                  <Mail className="w-4 h-4 text-primary shrink-0" />
-                  <a href="mailto:contact@automatebusinesssolutions.de5.net" className="font-medium text-dark hover:underline">
+                <div className="flex items-start gap-space-3 min-w-0">
+                  <Mail className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <a href="mailto:contact@automatebusinesssolutions.de5.net" className="font-medium text-dark hover:underline break-all">
                     contact@automatebusinesssolutions.de5.net
                   </a>
                 </div>
-                <div className="flex items-center gap-space-3">
+                <div className="flex items-center gap-space-3 min-w-0">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
                   <span className="font-medium text-dark">Andhra Pradesh, India</span>
                 </div>
