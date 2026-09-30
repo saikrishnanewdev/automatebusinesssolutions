@@ -205,11 +205,11 @@ export default function About() {
             <div className="flex flex-wrap gap-space-4 text-xs text-secondary pt-space-1">
               <div className="flex items-center gap-space-2">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>abs.innovates@gmail.com</span>
+                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:underline">contact@automatebusinesssolutions.de5.net</a>
               </div>
               <div className="flex items-center gap-space-2">
                 <Globe className="w-4 h-4 text-primary" />
-                <a href="https://automatebusinesssolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:underline">automatebusinesssolutions.vercel.app</a>
+                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:underline">automatebusinesssolutions.de5.net</a>
               </div>
               <div className="flex items-center gap-space-2">
                 <MapPin className="w-4 h-4 text-primary" />

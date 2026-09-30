@@ -150,13 +150,15 @@ export default function Contact() {
               <div className="card-token p-space-6 space-y-space-3 text-sm text-secondary">
                 <div className="flex items-center gap-space-3">
                   <Globe className="w-4 h-4 text-primary shrink-0" />
-                  <a href="https://automatebusinesssolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline">
-                    automatebusinesssolutions.vercel.app
+                  <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline">
+                    automatebusinesssolutions.de5.net
                   </a>
                 </div>
                 <div className="flex items-center gap-space-3">
                   <Mail className="w-4 h-4 text-primary shrink-0" />
-                  <span className="font-medium text-dark">abs.innovates@gmail.com</span>
+                  <a href="mailto:contact@automatebusinesssolutions.de5.net" className="font-medium text-dark hover:underline">
+                    contact@automatebusinesssolutions.de5.net
+                  </a>
                 </div>
                 <div className="flex items-center gap-space-3">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />

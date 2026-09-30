@@ -50,11 +50,11 @@ export default function Footer() {
             <div className="space-y-space-2 text-sm text-secondary">
               <div className="flex items-center gap-space-2">
                 <Globe className="w-4 h-4 text-accent shrink-0" />
-                <a href="https://automatebusinesssolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">automatebusinesssolutions.vercel.app</a>
+                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">automatebusinesssolutions.de5.net</a>
               </div>
               <div className="flex items-center gap-space-2">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
-                <span>abs.innovates@gmail.com</span>
+                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors">contact@automatebusinesssolutions.de5.net</a>
               </div>
               <div className="flex items-center gap-space-2">
                 <MapPin className="w-4 h-4 text-accent shrink-0" />
