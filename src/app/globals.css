@@ -42,7 +42,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Custom Utilities for Autom Mate Tokens */
+/* Custom Utilities for Automate Tokens */
 @layer components {
   .btn-primary {
     display: inline-flex;

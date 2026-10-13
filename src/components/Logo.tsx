@@ -38,7 +38,7 @@ export default function Logo({ className = '', showTagline = false, size = 'md' 
       {/* Brand Typography */}
       <div className="flex flex-col text-left">
         <div className={`tracking-tight text-dark leading-none ${textSizes[size]}`}>
-          Autom <span className="text-primary">Mate</span>
+          Auto<span className="text-primary">mate</span>
         </div>
         {showTagline ? (
           <div className="text-xs font-normal text-secondary mt-1">

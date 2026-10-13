@@ -48,7 +48,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base text-secondary max-w-xl leading-relaxed"
             >
-              Autom Mate engineers custom Windows desktop software, native iOS & Android applications, full-stack web portals, WhatsApp AI chatbots, and custom software that eliminates manual work in any business operation.
+              Automate engineers custom Windows desktop software, native iOS & Android applications, full-stack web portals, WhatsApp AI chatbots, and custom software that eliminates manual work in any business operation.
             </motion.p>
 
             {/* Action CTAs */}
@@ -107,7 +107,7 @@ export default function Hero() {
                   <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
                   <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                   <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
-                  <span className="text-dark font-medium ml-space-2">Autom Mate ERP & Systems Portal</span>
+                  <span className="text-dark font-medium ml-space-2">Automate ERP & Systems Portal</span>
                 </div>
                 <span className="text-xs bg-bg-light border border-border-light text-primary px-space-2 py-space-1 rounded-sm font-medium">
                   Live preview

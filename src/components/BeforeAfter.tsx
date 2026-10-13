@@ -33,7 +33,7 @@ export default function BeforeAfter() {
             Transformation
           </div>
           <h2 className="text-2xl sm:text-lg font-bold text-dark tracking-tight">
-            Manual business operations vs. Autom Mate software.
+            Manual business operations vs. Automate software.
           </h2>
           <p className="text-base text-secondary mt-space-3 max-w-2xl">
             See how replacing repetitive manual work with custom ERPs, native desktop/mobile apps, and WhatsApp automation elevates speed and productivity.
@@ -74,7 +74,7 @@ export default function BeforeAfter() {
             </div>
           </motion.div>
 
-          {/* Autom Mate */}
+          {/* Automate */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function BeforeAfter() {
                 <CheckCircle2 className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-dark text-base">Autom Mate custom software</h3>
+                <h3 className="font-semibold text-dark text-base">Automate custom software</h3>
                 <p className="text-xs text-primary font-medium">Automated, streamlined, and scalable</p>
               </div>
             </div>

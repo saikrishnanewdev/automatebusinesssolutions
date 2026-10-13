@@ -47,7 +47,7 @@ export default function WhyAutomate() {
             Metrics
           </div>
           <h2 className="text-2xl sm:text-lg font-bold text-dark tracking-tight">
-            Quantifiable value of Autom Mate.
+            Quantifiable value of Automate.
           </h2>
           <p className="text-base text-secondary mt-space-3 max-w-2xl">
             Key operational metrics achieved when implementing custom software and automated workflows.

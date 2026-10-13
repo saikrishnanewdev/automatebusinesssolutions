@@ -51,7 +51,7 @@ export default function About() {
             Company
           </div>
           <h2 className="text-2xl sm:text-lg font-bold text-dark tracking-tight">
-            About Autom Mate.
+            About Automate.
           </h2>
           <p className="text-base text-secondary mt-space-3 max-w-2xl">
             We build custom ERP systems, desktop and mobile applications, web portals, and process automation to eliminate manual operational friction.
