@@ -46,7 +46,7 @@ export default function Logo({ className = '', showTagline = false, size = 'md' 
           </div>
         ) : (
           <div className="text-xs tracking-wider text-secondary uppercase mt-0.5 font-medium">
-            Business Automation
+            Business Solutions
           </div>
         )}
       </div>

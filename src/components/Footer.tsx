@@ -24,7 +24,7 @@ export default function Footer() {
               <Logo size="md" />
             </div>
             <p className="text-sm text-secondary leading-relaxed">
-              Automate engineers custom ERP systems, native Windows & mobile applications, web portals, WhatsApp AI chatbots, and process automation to eliminate manual business work.
+              Automate Business Solutions engineers custom ERP systems, native Windows & mobile applications, web portals, WhatsApp AI chatbots, and process automation to eliminate manual business work.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-space-10 pt-space-6 border-t border-secondary/30 flex flex-col sm:flex-row items-center justify-between text-xs text-secondary gap-space-4">
           <p>
-            © {new Date().getFullYear()} Automate. All rights reserved.
+            © {new Date().getFullYear()} Automate Business Solutions. All rights reserved.
           </p>
           <div className="flex items-center space-x-space-4">
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>

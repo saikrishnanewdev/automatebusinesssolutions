@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Automate | Custom ERP, Mobile & Desktop Apps, WhatsApp AI Automation',
-  description: 'Automate engineers custom ERP systems, native Windows & mobile applications, web portals, WhatsApp AI chatbots, and process automation to eliminate manual business work.',
+  title: 'Automate Business Solutions | Custom ERP, Mobile & Desktop Apps, WhatsApp AI Automation',
+  description: 'Automate Business Solutions engineers custom ERP systems, native Windows & mobile applications, web portals, WhatsApp AI chatbots, and process automation to eliminate manual business work.',
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'Process Automation'
   ],
   openGraph: {
-    title: 'Automate | Custom ERP & Business Process Automation',
+    title: 'Automate Business Solutions | Custom ERP & Business Process Automation',
     description: 'Custom ERP systems, native Windows & mobile applications, web portals, and WhatsApp AI automation.',
     type: 'website',
-    siteName: 'Automate'
+    siteName: 'Automate Business Solutions'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Automate | Custom Software & Process Automation',
+    title: 'Automate Business Solutions | Custom Software & Process Automation',
     description: 'Custom ERP systems, desktop and mobile applications, and WhatsApp AI automation.'
   },
   robots: {
