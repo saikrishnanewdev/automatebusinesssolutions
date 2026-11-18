@@ -5,7 +5,6 @@ import Logo from './Logo';
 import { ShieldCheck, Mail, MapPin, Globe, MessageSquare } from 'lucide-react';
 
 const links = [
-  { name: 'Solutions', href: '#solutions' },
   { name: 'Services', href: '#services' },
   { name: 'Showcase', href: '#showcase' },
   { name: 'About us', href: '#about' },
@@ -102,7 +101,6 @@ export default function Footer() {
             <a href="/terms" className="hover:text-primary transition-colors">Terms</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
-            <a href="#solutions" className="hover:text-primary transition-colors">Solutions</a>
           </div>
         </div>
       </div>
