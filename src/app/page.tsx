@@ -9,6 +9,7 @@ import Industries from '@/components/Industries';
 import WhyAutomate from '@/components/WhyAutomate';
 import Process from '@/components/Process';
 import About from '@/components/About';
+import Clients from '@/components/Clients';
 import CTA from '@/components/CTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -27,6 +28,7 @@ export default function Home() {
       <WhyAutomate />
       <Process />
       <About />
+      <Clients />
       <CTA />
       <Contact />
       <Footer />
