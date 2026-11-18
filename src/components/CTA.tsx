@@ -27,7 +27,7 @@ export default function CTA() {
               href="#contact"
               className="btn-primary w-full text-center"
             >
-              <span>Request free consultation</span>
+              <span>Request a free consultation</span>
               <ArrowRight className="w-4 h-4" />
             </a>
             <a

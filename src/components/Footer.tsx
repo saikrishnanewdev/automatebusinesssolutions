@@ -7,7 +7,7 @@ import { ShieldCheck, Mail, MapPin, Globe } from 'lucide-react';
 const links = [
   { name: 'Solutions', href: '#solutions' },
   { name: 'Services', href: '#services' },
-  { name: 'Automation showcase', href: '#showcase' },
+  { name: 'Showcase', href: '#showcase' },
   { name: 'About us', href: '#about' },
   { name: 'Contact us', href: '#contact' },
 ];
@@ -20,9 +20,7 @@ export default function Footer() {
 
           {/* Logo & Tagline */}
           <div className="lg:col-span-4 space-y-space-3">
-            <div className="bg-bg-white p-space-2 rounded-sm inline-block">
-              <Logo size="md" />
-            </div>
+            <Logo size="md" onDark />
             <p className="text-sm text-secondary leading-relaxed">
               Automate Business Solutions engineers custom ERP systems, native Windows & mobile applications, web portals, WhatsApp AI chatbots, and process automation to eliminate manual business work.
             </p>
@@ -50,13 +48,13 @@ export default function Footer() {
             <div className="space-y-space-2 text-sm text-secondary">
               <div className="flex items-start gap-space-2 min-w-0">
                 <Globe className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors break-all">
+                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors break-words">
                   automatebusinesssolutions.de5.net
                 </a>
               </div>
               <div className="flex items-start gap-space-2 min-w-0">
                 <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors break-all">
+                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors break-words">
                   contact@automatebusinesssolutions.de5.net
                 </a>
               </div>
@@ -93,6 +91,8 @@ export default function Footer() {
             © {new Date().getFullYear()} Automate Business Solutions. All rights reserved.
           </p>
           <div className="flex items-center space-x-space-4">
+            <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-primary transition-colors">Terms</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
             <a href="#solutions" className="hover:text-primary transition-colors">Solutions</a>

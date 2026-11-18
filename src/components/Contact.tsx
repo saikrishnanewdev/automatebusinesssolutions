@@ -150,13 +150,13 @@ export default function Contact() {
               <div className="card-token p-space-6 space-y-space-3 text-sm text-secondary min-w-0">
                 <div className="flex items-start gap-space-3 min-w-0">
                   <Globe className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                  <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline break-all">
+                  <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline break-words">
                     automatebusinesssolutions.de5.net
                   </a>
                 </div>
                 <div className="flex items-start gap-space-3 min-w-0">
                   <Mail className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                  <a href="mailto:contact@automatebusinesssolutions.de5.net" className="font-medium text-dark hover:underline break-all">
+                  <a href="mailto:contact@automatebusinesssolutions.de5.net" className="font-medium text-dark hover:underline break-words">
                     contact@automatebusinesssolutions.de5.net
                   </a>
                 </div>
@@ -179,13 +179,13 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="card-token p-space-6 space-y-space-4">
                 <div className="grid gap-space-4 sm:grid-cols-2">
                   <div className="space-y-space-1">
-                    <label className="text-xs font-semibold text-dark flex items-center gap-space-1.5">
+                    <label className="text-xs font-semibold text-dark flex items-center gap-2">
                       <User className="w-3.5 h-3.5 text-primary" /> Full name *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Alex Morgan"
+                      placeholder="e.g. Sai Kumar"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-space-4 py-space-3 rounded-sm bg-bg-white border border-border-medium text-dark placeholder:text-secondary text-sm focus:border-primary focus:outline-none"
@@ -193,13 +193,13 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-space-1">
-                    <label className="text-xs font-semibold text-dark flex items-center gap-space-1.5">
+                    <label className="text-xs font-semibold text-dark flex items-center gap-2">
                       <Building className="w-3.5 h-3.5 text-primary" /> Company name *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. FinTech Innovations"
+                      placeholder="e.g. Sri Lakshmi Traders"
                       value={formData.businessName}
                       onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                       className="w-full px-space-4 py-space-3 rounded-sm bg-bg-white border border-border-medium text-dark placeholder:text-secondary text-sm focus:border-primary focus:outline-none"
@@ -207,13 +207,13 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-space-1">
-                    <label className="text-xs font-semibold text-dark flex items-center gap-space-1.5">
+                    <label className="text-xs font-semibold text-dark flex items-center gap-2">
                       <Mail className="w-3.5 h-3.5 text-primary" /> Work email *
                     </label>
                     <input
                       type="email"
                       required
-                      placeholder="e.g. alex@fintech.com"
+                      placeholder="e.g. sai@company.in"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-space-4 py-space-3 rounded-sm bg-bg-white border border-border-medium text-dark placeholder:text-secondary text-sm focus:border-primary focus:outline-none"
@@ -221,12 +221,12 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-space-1">
-                    <label className="text-xs font-semibold text-dark flex items-center gap-space-1.5">
+                    <label className="text-xs font-semibold text-dark flex items-center gap-2">
                       <Phone className="w-3.5 h-3.5 text-primary" /> Phone number
                     </label>
                     <input
                       type="tel"
-                      placeholder="e.g. +1 (555) 019-2834"
+                      placeholder="e.g. +91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-space-4 py-space-3 rounded-sm bg-bg-white border border-border-medium text-dark placeholder:text-secondary text-sm focus:border-primary focus:outline-none"
@@ -235,7 +235,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-space-1">
-                  <label className="text-xs font-semibold text-dark flex items-center gap-space-1.5">
+                  <label className="text-xs font-semibold text-dark flex items-center gap-2">
                     <Layers className="w-3.5 h-3.5 text-primary" /> Solution category *
                   </label>
                   <select
@@ -253,7 +253,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-space-1">
-                  <label className="text-xs font-semibold text-dark flex items-center gap-space-1.5">
+                  <label className="text-xs font-semibold text-dark flex items-center gap-2">
                     <MessageSquare className="w-3.5 h-3.5 text-primary" /> Project scope & requirements *
                   </label>
                   <textarea
@@ -278,7 +278,7 @@ export default function Contact() {
                     </span>
                   ) : (
                     <>
-                      <span>Request consultation</span>
+                      <span>Request a free consultation</span>
                       <Send className="w-4 h-4" />
                     </>
                   )}
@@ -289,6 +289,14 @@ export default function Contact() {
                     {error}
                   </div>
                 )}
+
+                <p className="text-xs text-secondary text-center leading-relaxed">
+                  By submitting, you agree to our{' '}
+                  <a href="/terms" className="text-primary hover:underline">Terms</a>
+                  {' '}and{' '}
+                  <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.
+                  We only use your details to reply to your enquiry.
+                </p>
               </form>
             </motion.div>
           </div>

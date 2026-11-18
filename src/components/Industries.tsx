@@ -70,7 +70,7 @@ export default function Industries() {
             href="#contact"
             className="btn-primary text-sm shrink-0"
           >
-            <span>Consult our engineers</span>
+            <span>Request a free consultation</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

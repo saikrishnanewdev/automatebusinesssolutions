@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const beforeItems = [
-  'Manual Excel updates & copy-pasting customer details everyday',
+  'Manual Excel updates & copy-pasting customer details every day',
   'WhatsApp inquiries and leads missed or answered hours late',
   'Fragmented tools requiring repetitive data re-entry',
   'Manual paper & spreadsheet reporting taking staff hours',
@@ -18,7 +18,7 @@ const afterItems = [
   'Automated 24/7 WhatsApp AI chatbots capturing & qualifying leads',
   'Custom Windows desktop & mobile apps for instant team access',
   'Real-time live executive dashboard generated automatically',
-  '100% data precision & 24/7 background script execution',
+  'High data accuracy & 24/7 background script execution',
   'Centralized secure database with zero manual data entry'
 ];
 
@@ -102,7 +102,7 @@ export default function BeforeAfter() {
             </ul>
 
             <div className="mt-space-6 p-space-3 text-xs text-dark bg-bg-light border border-border-medium rounded-sm font-medium">
-              Impact: 100% data precision, 24/7 lead automation, and zero manual friction.
+              Impact: High data accuracy, 24/7 lead automation, and far less manual work.
             </div>
 
             <div className="mt-space-6">
@@ -110,7 +110,7 @@ export default function BeforeAfter() {
                 href="#contact"
                 className="w-full btn-primary"
               >
-                <span>Automate your business processes</span>
+                <span>Request a free consultation</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

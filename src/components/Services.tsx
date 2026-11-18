@@ -51,7 +51,7 @@ const services = [
     icon: MessageSquare,
     title: 'WhatsApp AI & lead automation',
     description: '24/7 automated WhatsApp AI chatbots, lead capture engines, instant notification dispatches, and customer support workflows.',
-    benefit: 'Capture & qualify 100% of leads 24/7',
+    benefit: 'Capture & qualify leads automatically, 24/7',
     image: '/images/whatsapp_automation.jpg'
   },
   {
@@ -123,7 +123,7 @@ export default function Services() {
 
               <div>
                 {/* Benefit Badge */}
-                <div className="inline-flex items-center gap-space-2 px-space-3 py-space-1.5 rounded-sm bg-bg-light border border-border-light text-dark text-xs font-medium mb-space-4">
+                <div className="inline-flex items-center gap-space-2 px-space-3 py-1.5 rounded-sm bg-bg-light border border-border-light text-dark text-xs font-medium mb-space-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                   <span>{service.benefit}</span>
                 </div>
@@ -133,7 +133,7 @@ export default function Services() {
                   href="#contact"
                   className="flex items-center gap-space-2 text-sm font-medium text-primary hover:text-dark transition-colors"
                 >
-                  <span>Request custom demo</span>
+                  <span>Request a demo</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>

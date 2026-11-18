@@ -35,7 +35,7 @@ export default function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
               className="text-3xl sm:text-4xl lg:text-xl font-bold tracking-tight text-dark leading-tight"
             >
               Custom ERP systems, mobile apps & automated workflows.
@@ -45,7 +45,7 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="text-base text-secondary max-w-xl leading-relaxed"
             >
               Automate engineers custom Windows desktop software, native iOS & Android applications, full-stack web portals, WhatsApp AI chatbots, and custom software that eliminates manual work in any business operation.
@@ -55,11 +55,11 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.15 }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-4 pt-space-2"
             >
               <a href="#contact" className="btn-primary">
-                <span>Request custom solution</span>
+                <span>Request a free consultation</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -72,7 +72,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className="pt-space-6 flex flex-wrap gap-space-4 text-xs text-secondary border-t border-border-light"
             >
               <div className="flex items-center gap-space-2">
@@ -99,7 +99,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="card-token p-space-3 bg-bg-white border-border-medium shadow-md rounded-sm"
             >
               <div className="flex items-center justify-between pb-space-3 px-space-2 border-b border-border-light mb-space-3 text-xs">

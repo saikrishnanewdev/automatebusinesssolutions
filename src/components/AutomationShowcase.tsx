@@ -108,13 +108,13 @@ export default function AutomationShowcase() {
         <div className="mt-space-10 pt-space-6 border-t border-border-light flex flex-col sm:flex-row items-center justify-between gap-space-4">
           <div className="text-left">
             <h4 className="text-base font-semibold text-dark">Want a WhatsApp bot or ERP workflow for your business?</h4>
-            <p className="text-sm text-secondary">We build and deploy customized AI workflows tailored to your business needs.</p>
+            <p className="text-sm text-secondary">We build and deploy customised AI workflows tailored to your business needs.</p>
           </div>
           <a
             href="#contact"
             className="btn-primary shrink-0"
           >
-            <span>Get custom workflow demo</span>
+            <span>Request a demo</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

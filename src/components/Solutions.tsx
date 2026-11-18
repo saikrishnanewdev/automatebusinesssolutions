@@ -23,7 +23,7 @@ const solutions = [
     title: 'Custom Windows desktop software',
     icon: Monitor,
     desc: 'Native Windows desktop applications built for high-speed offline operations, device hardware connectivity, and deep desktop performance.',
-    benefit: 'Sub-millisecond processing speed on Windows PCs'
+    benefit: 'Fast, responsive processing on Windows PCs'
   },
   {
     title: 'Custom iOS & Android mobile apps',
@@ -41,13 +41,13 @@ const solutions = [
     title: 'WhatsApp AI lead & support automation',
     icon: MessageSquare,
     desc: 'Automated 24/7 WhatsApp AI chatbots that capture incoming leads, answer customer FAQs, and dispatch automated status alerts.',
-    benefit: 'Zero missed sales opportunities 24 hours a day'
+    benefit: 'Automated replies to sales enquiries, 24 hours a day'
   },
   {
     title: 'Any manual work & Excel automation',
     icon: FileSpreadsheet,
     desc: 'Automate repetitive spreadsheet data entry, file format conversions, report generation, and manual cross-system copy-pasting.',
-    benefit: 'Reclaim 100% of time spent on tedious manual tasks'
+    benefit: 'Reclaim hours spent on tedious manual tasks'
   }
 ];
 
@@ -102,7 +102,7 @@ export default function Solutions() {
                   href="#contact"
                   className="w-full btn-secondary text-sm"
                 >
-                  <span>Request custom proposal</span>
+                  <span>Request a demo</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
