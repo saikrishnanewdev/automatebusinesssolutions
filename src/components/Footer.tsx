@@ -44,18 +44,18 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="lg:col-span-3 space-y-space-3 min-w-0">
+          <div className="lg:col-span-4 space-y-space-3 min-w-0">
             <h3 className="font-semibold text-bg-white text-base">Contact</h3>
             <div className="space-y-space-2 text-sm text-secondary">
               <div className="flex items-start gap-space-2 min-w-0">
                 <Globe className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors break-words">
+                <a href="https://automatebusinesssolutions.de5.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors break-all min-w-0">
                   automatebusinesssolutions.de5.net
                 </a>
               </div>
               <div className="flex items-start gap-space-2 min-w-0">
                 <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors break-words">
+                <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors break-all min-w-0">
                   contact@automatebusinesssolutions.de5.net
                 </a>
               </div>
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           {/* Certifications & Quality */}
-          <div className="lg:col-span-3 space-y-space-3">
+          <div className="lg:col-span-2 space-y-space-3">
             <h3 className="font-semibold text-bg-white text-base">Quality & standards</h3>
             <div className="space-y-space-2 text-sm text-secondary">
               <div className="flex items-center gap-space-2">

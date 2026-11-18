@@ -24,7 +24,7 @@ export default function Logo({ className = '', showTagline = false, size = 'md',
     <div className={`flex items-center gap-space-3 select-none ${className}`}>
       {/* Brand Icon - Automated Connection Engine */}
       <div className={`relative flex items-center justify-center shrink-0 ${iconSizes[size]}`}>
-        <div className={`relative w-full h-full ${onDark ? 'bg-bg-white' : 'bg-dark'} border border-border-medium rounded-sm p-1.5 flex items-center justify-center shadow-sm`}>
+        <div className={`relative w-full h-full border ${onDark ? 'bg-dark border-white/20' : 'bg-dark border-border-medium'} rounded-sm p-1.5 flex items-center justify-center shadow-sm`}>
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
             <path d="M8 20H32" stroke="#007BFF" strokeWidth="3" strokeLinecap="round" strokeDasharray="4 2" />
             <circle cx="8" cy="20" r="4" fill="#091520" stroke="#007BFF" strokeWidth="2" />
