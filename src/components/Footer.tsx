@@ -6,8 +6,6 @@ import { ShieldCheck, Mail, MapPin, Globe, MessageSquare } from 'lucide-react';
 
 const links = [
   { name: 'Services', href: '#services' },
-  { name: 'Showcase', href: '#showcase' },
-  { name: 'About us', href: '#about' },
   { name: 'Clients', href: '#clients' },
   { name: 'Contact us', href: '#contact' },
 ];
