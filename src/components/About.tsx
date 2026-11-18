@@ -218,7 +218,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-space-2 min-w-0">
                 <MapPin className="w-4 h-4 text-primary shrink-0" />
-                <span>Andhra Pradesh, India</span>
+                <span>Kakinada, Andhra Pradesh 533005</span>
               </div>
             </div>
           </div>

@@ -168,7 +168,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-center gap-space-3 min-w-0">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  <span className="font-medium text-dark">Andhra Pradesh, India</span>
+                  <span className="font-medium text-dark">Kakinada, Andhra Pradesh 533005</span>
                 </div>
               </div>
 
