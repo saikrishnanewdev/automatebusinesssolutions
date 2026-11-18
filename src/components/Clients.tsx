@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Building2, Code2 } from 'lucide-react';
+import { ArrowUpRight, Building2 } from 'lucide-react';
 
 const clients = [
   { name: 'Wall Creations', note: 'Custom Windows Application', link: null as string | null },
@@ -24,8 +24,7 @@ export default function Clients() {
             Businesses we&apos;ve built software for.
           </h2>
           <p className="text-base text-secondary mt-space-3 max-w-2xl">
-            A few of the teams who trust Automate with their systems — see more
-            of our work on GitHub.
+            A few of the teams who trust Automate with their systems.
           </p>
         </div>
 
@@ -62,30 +61,6 @@ export default function Clients() {
             </motion.div>
           ))}
 
-          <motion.a
-            href="https://github.com/saikrishnanewdev"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.25 }}
-            className="card-token p-space-6 flex flex-col justify-center hover:border-primary transition-colors"
-          >
-            <div className="flex items-center gap-space-3 mb-space-3">
-              <div className="w-10 h-10 rounded-sm bg-bg-light border border-border-medium flex items-center justify-center shrink-0">
-                <Code2 className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-semibold text-dark text-base">More on GitHub</h3>
-            </div>
-            <p className="text-sm text-secondary leading-relaxed mb-space-4">
-              Browse our projects and code at github.com/saikrishnanewdev.
-            </p>
-            <span className="flex items-center gap-space-2 text-sm font-medium text-primary">
-              <span>View our projects on GitHub</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </span>
-          </motion.a>
         </div>
       </div>
     </section>
