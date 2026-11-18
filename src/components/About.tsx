@@ -13,6 +13,7 @@ import {
   Target,
   TrendingUp,
   Bot,
+  MessageSquare,
   ArrowRight
 } from 'lucide-react';
 
@@ -206,6 +207,10 @@ export default function About() {
               <div className="flex items-start gap-space-2 min-w-0">
                 <Mail className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:underline break-all">contact@automatebusinesssolutions.de5.net</a>
+              </div>
+              <div className="flex items-start gap-space-2 min-w-0">
+                <MessageSquare className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <a href="https://wa.me/17376677249" target="_blank" rel="noopener noreferrer" className="hover:underline break-all">+1 737 667 7249 (WhatsApp)</a>
               </div>
               <div className="flex items-start gap-space-2 min-w-0">
                 <Globe className="w-4 h-4 text-primary shrink-0 mt-0.5" />

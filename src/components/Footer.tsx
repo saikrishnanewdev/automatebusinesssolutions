@@ -2,13 +2,14 @@
 
 import React from 'react';
 import Logo from './Logo';
-import { ShieldCheck, Mail, MapPin, Globe } from 'lucide-react';
+import { ShieldCheck, Mail, MapPin, Globe, MessageSquare } from 'lucide-react';
 
 const links = [
   { name: 'Solutions', href: '#solutions' },
   { name: 'Services', href: '#services' },
   { name: 'Showcase', href: '#showcase' },
   { name: 'About us', href: '#about' },
+  { name: 'Clients', href: '#clients' },
   { name: 'Contact us', href: '#contact' },
 ];
 
@@ -56,6 +57,12 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                 <a href="mailto:contact@automatebusinesssolutions.de5.net" className="hover:text-primary transition-colors break-words">
                   contact@automatebusinesssolutions.de5.net
+                </a>
+              </div>
+              <div className="flex items-start gap-space-2 min-w-0">
+                <MessageSquare className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <a href="https://wa.me/17376677249" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors break-words">
+                  +1 737 667 7249 (WhatsApp)
                 </a>
               </div>
               <div className="flex items-center gap-space-2 min-w-0">

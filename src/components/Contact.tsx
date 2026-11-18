@@ -160,6 +160,12 @@ export default function Contact() {
                     contact@automatebusinesssolutions.de5.net
                   </a>
                 </div>
+                <div className="flex items-start gap-space-3 min-w-0">
+                  <MessageSquare className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <a href="https://wa.me/17376677249" target="_blank" rel="noopener noreferrer" className="font-medium text-dark hover:underline break-words">
+                    +1 737 667 7249 (WhatsApp)
+                  </a>
+                </div>
                 <div className="flex items-center gap-space-3 min-w-0">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
                   <span className="font-medium text-dark">Andhra Pradesh, India</span>
