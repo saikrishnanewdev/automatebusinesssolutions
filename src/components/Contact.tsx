@@ -72,7 +72,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-space-12 bg-bg-light border-b border-border-medium">
+    <section className="py-space-12 bg-bg-light border-b border-border-medium">
       <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
 
         {/* Section Header */}
@@ -89,7 +89,7 @@ export default function Contact() {
         </div>
 
         {submitted ? (
-          <div className="card-token p-space-8 text-center max-w-2xl mx-auto">
+          <div id="contact" className="card-token p-space-8 text-center max-w-2xl mx-auto scroll-mt-28">
             <div className="flex items-center justify-center w-12 h-12 mb-space-4 rounded-full bg-primary/10 text-primary mx-auto">
               <CheckCircle2 className="w-6 h-6" />
             </div>
@@ -180,7 +180,8 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="lg:col-span-7"
+              id="contact"
+              className="lg:col-span-7 scroll-mt-28"
             >
               <form onSubmit={handleSubmit} className="card-token p-space-6 space-y-space-4">
                 <div className="grid gap-space-4 sm:grid-cols-2">

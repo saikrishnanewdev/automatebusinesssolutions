@@ -68,7 +68,7 @@ const services = [
 export default function Services() {
   const { ref: rowRef, handlers: rowHandlers } = useAutoSlide();
   return (
-    <section id="services" className="py-space-12 bg-bg-light border-b border-border-medium">
+    <section id="services" className="py-space-12 bg-bg-light border-b border-border-medium scroll-mt-24">
       <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
 
         {/* Section Header */}

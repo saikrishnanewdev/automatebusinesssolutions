@@ -16,7 +16,7 @@ const clients = [
 export default function Clients() {
   const { ref: rowRef, handlers: rowHandlers } = useAutoSlide();
   return (
-    <section id="clients" className="py-space-12 bg-bg-light border-b border-border-medium">
+    <section id="clients" className="py-space-12 bg-bg-light border-b border-border-medium scroll-mt-24">
       <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
         <div className="text-left mb-space-10">
           <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-space-2">
