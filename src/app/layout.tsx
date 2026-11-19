@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import ScrollToTopOnLoad from '@/components/ScrollToTopOnLoad';
 
 export const metadata: Metadata = {
   title: 'Automate Business Solutions | Custom ERP, Mobile & Desktop Apps, WhatsApp AI Automation',
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-bg-light text-dark antialiased font-sans">
+        <ScrollToTopOnLoad />
         {children}
       </body>
     </html>
