@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useAutoSlide } from './useAutoSlide';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Building2 } from 'lucide-react';
 
@@ -13,6 +14,7 @@ const clients = [
 ];
 
 export default function Clients() {
+  const { ref: rowRef, handlers: rowHandlers } = useAutoSlide();
   return (
     <section id="clients" className="py-space-12 bg-bg-light border-b border-border-medium">
       <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
@@ -29,7 +31,7 @@ export default function Clients() {
           <p className="text-sm text-secondary mt-space-3">Swipe to see more &rarr;</p>
         </div>
 
-        <div className="scroll-row">
+        <div className="scroll-row" ref={rowRef} {...rowHandlers}>
           {clients.map((client, index) => (
             <motion.div
               key={client.name}
