@@ -35,7 +35,7 @@ export default function Founders() {
         </div>
 
         {/* Two cards side by side on every screen, each a compact horizontal row */}
-        <div className="grid grid-cols-2 gap-space-4 sm:gap-space-6">
+        <div className="grid grid-cols-2 gap-space-4 sm:gap-space-6 max-w-3xl">
           {founders.map((founder, index) => (
             <motion.div
               key={founder.name}
