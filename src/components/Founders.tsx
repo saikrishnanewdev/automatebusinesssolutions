@@ -34,7 +34,8 @@ export default function Founders() {
           </p>
         </div>
 
-        <div className="grid gap-space-6 sm:grid-cols-2">
+        {/* Two cards side by side on every screen, each a compact horizontal row */}
+        <div className="grid grid-cols-2 gap-space-4 sm:gap-space-6">
           {founders.map((founder, index) => (
             <motion.div
               key={founder.name}
@@ -42,21 +43,22 @@ export default function Founders() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="card-token p-space-6"
+              className="card-token p-space-4 sm:p-space-6"
             >
-              <div className="flex items-center gap-space-4 mb-space-4">
-                <div className="w-14 h-14 rounded-sm bg-primary text-bg-white flex items-center justify-center shrink-0 text-lg font-bold">
+              <div className="flex items-center gap-space-3 sm:gap-space-4">
+                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-dark text-bg-white flex items-center justify-center shrink-0 text-sm sm:text-lg font-bold">
                   {founder.initials}
                 </div>
-                <div>
-                  <h3 className="font-semibold text-dark text-base">{founder.name}</h3>
-                  <p className="text-sm text-secondary">{founder.qualification}</p>
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-dark text-sm sm:text-base truncate">
+                    {founder.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-secondary truncate">{founder.role}</p>
+                  <p className="text-xs text-accent font-medium mt-0.5">
+                    {founder.qualification} &middot; Co-founder
+                  </p>
                 </div>
               </div>
-              <p className="text-sm text-secondary leading-relaxed mb-space-3">{founder.role}</p>
-              <span className="inline-flex items-center px-space-3 py-1.5 rounded-sm bg-bg-light border border-border-light text-dark text-xs font-medium">
-                Co-founder
-              </span>
             </motion.div>
           ))}
         </div>
