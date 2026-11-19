@@ -97,8 +97,10 @@ body {
     border-radius: 4px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.4s ease;
   }
-  .card-token:hover {
-    border-color: var(--primary);
+  @media (hover: hover) {
+    .card-token:hover {
+      border-color: var(--primary);
+    }
   }
 
   /* Horizontal swipe row: cards scroll sideways on all widths */
