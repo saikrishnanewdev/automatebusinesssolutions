@@ -71,6 +71,8 @@ export default function Contact() {
     setSubmitted(false);
   };
 
+  // NOTE: id="contact" lives on the form below (not the section) so
+  // Contact buttons land exactly on the form, below the fixed navbar.
   return (
     <section className="py-space-12 bg-bg-light border-b border-border-medium">
       <div className="max-w-7xl mx-auto px-space-6 sm:px-space-8">
