@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 const navLinks = [
   { name: 'Services', href: '#services' },
   { name: 'Clients', href: '#clients' },
+  { name: 'Founders', href: '#founders' },
   { name: 'Contact', href: '#contact' },
 ];
 
