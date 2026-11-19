@@ -80,10 +80,11 @@ export default function Services() {
           <p className="text-base text-secondary mt-space-3 max-w-2xl">
             From complete custom ERP enterprise platforms to desktop, mobile, web, and automated WhatsApp AI workflows.
           </p>
+          <p className="text-sm text-secondary mt-space-3">Swipe to see more &rarr;</p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid gap-space-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Service Cards - horizontal swipe row */}
+        <div className="scroll-row">
           {services.map((service, idx) => (
             <motion.div
               key={service.id}
@@ -91,7 +92,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="card-token p-space-6 flex flex-col justify-between"
+              className="card-token p-space-6 flex flex-col justify-between w-[85%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               <div>
                 {/* Image Thumbnail */}

@@ -26,9 +26,10 @@ export default function Clients() {
           <p className="text-base text-secondary mt-space-3 max-w-2xl">
             A few of the teams who trust Automate with their systems.
           </p>
+          <p className="text-sm text-secondary mt-space-3">Swipe to see more &rarr;</p>
         </div>
 
-        <div className="grid gap-space-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="scroll-row">
           {clients.map((client, index) => (
             <motion.div
               key={client.name}
@@ -36,7 +37,7 @@ export default function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="card-token p-space-6"
+              className="card-token p-space-6 w-[85%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               <div className="flex items-center gap-space-3 mb-space-3">
                 <div className="w-10 h-10 rounded-sm bg-bg-light border border-border-medium flex items-center justify-center shrink-0">
